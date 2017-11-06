@@ -33,6 +33,10 @@ defmodule Neko.UserRate do
     end
   end
 
+  def user_anime_ids(user_id) do
+    store(user_id) |> Store.user_anime_ids()
+  end
+
   def all(user_id) do
     store(user_id) |> Store.all()
   end

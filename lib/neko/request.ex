@@ -76,7 +76,7 @@ defmodule Neko.Request do
 
   defp calc_new_achievements(user_id) do
     user_id
-    |> Neko.UserRate.all()
+    |> Neko.UserRate.user_anime_ids()
     |> Neko.Achievement.Calculator.call(user_id)
   end
 
